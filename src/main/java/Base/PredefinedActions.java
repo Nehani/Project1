@@ -17,10 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import Constant.ConstantValue;
 import CustomExceptions.ElementNotEnabledException;
 
-
-
 public class PredefinedActions {
-
 
 	protected static WebDriver driver;
 	static WebDriverWait wait;
@@ -29,6 +26,7 @@ public class PredefinedActions {
 	protected PredefinedActions() {
 
 	}
+
 	public static void start(String url) {
 		System.setProperty(ConstantValue.CHROMEDRIVERKEY, ConstantValue.CHROMEDRIVER);
 		driver = new ChromeDriver();
@@ -49,6 +47,7 @@ public class PredefinedActions {
 		actions = new Actions(driver);
 		return driver;
 	}
+
 	protected WebElement getElement(String locatorType, String locatorValue, boolean isWaitRequired) {
 		WebElement element = null;
 
@@ -169,22 +168,23 @@ public class PredefinedActions {
 //		return listOfElementText;
 //	}
 
-//	protected String getElementText(WebElement e, boolean isWaitRequired) {
-//		if (isWaitRequired)
-//			waitForVisibilityOfElement(e);
-//		String value = e.getText();
-//		if (value.equals("")) {
-//			value = e.getAttribute("value");
-//		}
-//		return value;
-//	}
-	
-	public static void takeScreenShot(String screenShotName) throws IOException {
-		TakesScreenshot screenshot = (TakesScreenshot)driver;
-		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(srcFile, new File(ConstantValue.SCREENSHOTLOCATION+screenShotName+ConstantValue.SCREENSHOTEXT));
+	protected String getElementText(WebElement e, boolean isWaitRequired) {
+		if (isWaitRequired)
+			waitForVisibilityOfElement(e);
+		String value = e.getText();
+		if (value.equals("")) {
+			value = e.getAttribute("value");
+		}
+		return value;
 	}
-		
+
+	public static void takeScreenShot(String screenShotName) throws IOException {
+		TakesScreenshot screenshot = (TakesScreenshot) driver;
+		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(srcFile,
+				new File(ConstantValue.SCREENSHOTLOCATION + screenShotName + ConstantValue.SCREENSHOTEXT));
+	}
+
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
@@ -194,7 +194,7 @@ public class PredefinedActions {
 	}
 
 	public static void closeBrowser() {
-		
+
 		driver.close();
 	}
 
@@ -223,5 +223,8 @@ public class PredefinedActions {
 		js.executeScript("arguments[0].checked=" + checkedOrUnchecked + "", ele);
 	}
 
+	public String getAriaSelectedAttribute(WebElement e) {
+		return e.getAttribute("aria-selected");
+	}
 
 }

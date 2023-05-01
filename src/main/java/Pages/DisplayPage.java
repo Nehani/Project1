@@ -17,11 +17,26 @@ public class DisplayPage extends PredefinedActions {
 	@FindBy(xpath = "//*[@id=\"root\"]/section/section/main/div/div[2]/div[1]/div[1]/div/div/div/div")
 	private WebElement textElement;
 	
+	@FindBy(xpath="//p[text()='Forward Trips']//parent::div//parent::div")
+	private WebElement forwardTripTab;
+	
+	
+	private DisplayPage() {
+		
+	}
 	
 	public static DisplayPage getObject() {
 		if (displayPage == null)
 			displayPage = new DisplayPage();
 		PageFactory.initElements(driver, displayPage);
 		return displayPage;
+	}
+	
+	public String checkForwardTripSelected() {
+		return getAriaSelectedAttribute(forwardTripTab);		
+	}
+	
+	public String getForwardTripText() {
+		return getElementText(textElement, true);
 	}
 }

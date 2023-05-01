@@ -13,12 +13,12 @@ import Utility.PropertyFileOperations;
 public class TestBase {
 	@BeforeMethod
 	public void setUp() throws IOException {
-		PropertyFileOperations fileOperations = new PropertyFileOperations(".src//main//resources//Config//settings.properties");
+		PropertyFileOperations fileOperations = new PropertyFileOperations(".//src//main//resources//Config//settings.properties");
 		String url = fileOperations.getValue("url");
 		PredefinedActions.start(url);
 
-		LoginPage loginPage = new LoginPage();
-		loginPage.login(fileOperations.getValue("username"), fileOperations.getValue("password"));
+		//LoginPage loginPage = new LoginPage();
+		//loginPage.login(fileOperations.getValue("username"), fileOperations.getValue("password"));
 	}
 		
 		@AfterMethod
