@@ -50,18 +50,19 @@ public class LoginTest extends TestBase {
 
 		Assert.assertEquals(actualTitle, expetedTitle,
 				"Expected title was " + expetedTitle + " but actual title was " + actualTitle);
-
+		System.out.println("STEP - To check Forward Trip is selected or not");
 		DisplayPage displayPage = DisplayPage.getObject();
 		String isForwardTripSelected = displayPage.checkForwardTripSelected();
 		System.out.println("Forward Trip Selected?" + isForwardTripSelected);
 		assertEquals(isForwardTripSelected, "true");
 
+		System.out.println("VERIFY - To check Vehicles | Forward Trips In-Progress is displayed ");
 		String expectedText = "Vehicles | Forward Trips In-Progress";
 		String actualText = displayPage.getForwardTripText();
 		System.out.println("Text:" + actualText);
 		assertEquals(actualText, expectedText);
-
-		System.out.println("Clean up - Close browser");
+		System.out.println("Vehicles | Forward Trips In-Progress is Displayed");
+		System.out.println("STEP - Clean up - Close browser");
 
 	}
 

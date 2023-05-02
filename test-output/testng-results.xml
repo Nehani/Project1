@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-01T19:16:28 IST" name="Default suite" finished-at="2023-05-01T19:16:28 IST" duration-ms="10">
+  <suite started-at="2023-05-02T15:33:54 IST" name="Default suite" finished-at="2023-05-02T15:34:06 IST" duration-ms="11317">
     <groups>
     </groups>
-    <test started-at="2023-05-01T19:16:28 IST" name="Default test" finished-at="2023-05-01T19:16:28 IST" duration-ms="10">
+    <test started-at="2023-05-02T15:33:54 IST" name="Default test" finished-at="2023-05-02T15:34:06 IST" duration-ms="11317">
+      <class name="Testscripts.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:33:54 IST" name="setUp" finished-at="2023-05-02T15:33:58 IST" duration-ms="3425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDisplayPage()[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:33:58 IST" name="verifyDisplayPage" finished-at="2023-05-02T15:34:00 IST" duration-ms="1980" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDisplayPage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:34:00 IST" name="tearDown" finished-at="2023-05-02T15:34:01 IST" duration-ms="798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDisplayPage status=SUCCESS method=LoginTest.verifyDisplayPage()[pri:0, instance:Testscripts.LoginTest@27ff5d15] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:34:01 IST" name="setUp" finished-at="2023-05-02T15:34:03 IST" duration-ms="2894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifySuccesfulLogin()[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:34:03 IST" name="verifySuccesfulLogin" finished-at="2023-05-02T15:34:04 IST" duration-ms="718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccesfulLogin -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Testscripts.LoginTest@27ff5d15]" started-at="2023-05-02T15:34:04 IST" name="tearDown" finished-at="2023-05-02T15:34:06 IST" duration-ms="1425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySuccesfulLogin status=SUCCESS method=LoginTest.verifySuccesfulLogin()[pri:0, instance:Testscripts.LoginTest@27ff5d15] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Testscripts.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
